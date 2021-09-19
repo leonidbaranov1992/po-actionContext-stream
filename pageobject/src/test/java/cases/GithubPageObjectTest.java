@@ -21,5 +21,4 @@ public class GithubPageObjectTest extends BaseHooks {
 
         assertThat(title, is("Status: Open"));
     }
-
 }

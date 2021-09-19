@@ -1,9 +1,12 @@
 package utils;
 
+import lombok.Value;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -30,6 +33,14 @@ public class BaseHooks {
     @After
     public void cleanUp() {
         driver.manage().deleteAllCookies();
+    }
+
+    public static Actions setActionsBuilder(){
+        return new Actions(driver);
+    }
+
+    public static void pause(){
+        driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
     }
 
 }

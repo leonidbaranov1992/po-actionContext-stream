@@ -16,7 +16,6 @@ public class ListOfIssuesPage extends AbstractPage {
     public IssuePage clickIssuesByNumber(int number) {
         List<WebElement> elements = driver.findElements(issueList);
         elements.get(number).click();
-
         return new IssuePage(driver);
     }
 

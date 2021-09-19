@@ -19,7 +19,7 @@ public class UsingGoogleSearchPage extends BaseHooks {
        GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
 
         // And now do the search.
-        page.searchFor("Cheese");
+        page.searchFor("привет");
 
     }
 }
